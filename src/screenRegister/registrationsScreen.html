@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./registrationsScreen.js" defer></script>
+</head>
+<body>
+    <div id="page">
+        <form method="POST" class="formLogin">
+            <h1>Register</h1>
+            <p>Enter the details below to register</p>
+            <label for="name">nome</label>
+            <input type="text" placeholder="Digite seu nome" autofocus="true" id="name"/>
+
+            <label for="email">E-mail</label>
+            <input type="email" placeholder="Digite seu e-mail" id="email"/>
+
+            <label for="password">Password</label>
+            <input type="password" name="password" placeholder="Digite sua senha" id="password"/>
+
+            <label for="confirmpassword">Password Confirmation</label>
+            <input type="Password" name="confirmpassword" placeholder="Digite sua senha novamente" id="confirmpassword"/>
+
+            <input type="submit" value="Acessar" class="btn" id="btnRegister"/>
+
+            <textarea name="responseApi" id="responseApi" cols="50" rows="10" placeholder="Response API"></textarea>
+        </form>
+
+        <form method="POST" class="formLogin" id="document">
+            <h1>API endpoints</h1>
+            
+            <table>
+                <tr>
+                    <th>Resource</th>
+                    <th>URl</th>
+                    <th>Method</th>
+                </tr>
+
+                <tr>
+                    <td>API</td>
+                    <td>https://ap2uni9.danieldias39.repl.co/register/user</td>
+                    <td>POST</td>
+                </tr>
+            </table>
+
+            <code>
+                <h2>payload</h2>
+                { <br>
+                    "name": "teste", <br>
+                    "email": "teste", <br>
+                    "password": "teste", <br>
+                    "confirmpassword": "teste" <br>
+                } <br>
+
+                <h2>Response</h2>
+                { <br>
+                    "msg": "Usuario criado com sucesso!", <br>
+                } <br>
+            </code>
+
+            <!-- ----------------------------------------------------------------------- -->
+
+            <table>
+                <tr>
+                    <th>Resource</th>
+                    <th>URl</th>
+                    <th>Method</th>
+                </tr>
+
+                <tr>
+                    <td>API</td>
+                    <td>https://ap2uni9.danieldias39.repl.co/login/user</td>
+                    <td>POST</td>
+                </tr>
+            </table>
+
+            <code>
+                <h2>payload</h2>
+                { <br>
+                    "email": "teste", <br>
+                    "password": "teste" <br>
+                } <br>
+
+                <h2>Response</h2>
+                { <br>
+                "msg": "Usuario autenticado com sucesso!", <br>
+                "token": "token" <br>
+                } <br>
+
+            </code>
+
+            <!-- ---------------------------------------------------------------- -->
+            
+            <table>
+                <tr>
+                    <th>Resource</th>
+                    <th>URl</th>
+                    <th>Method</th>
+                </tr>
+
+                <tr>
+                    <td>API</td>
+                    <td>https://ap2uni9.danieldias39.repl.co/qrcode/SUA_URL_OU_TEXTO</td>
+                    <td>GET</td>
+                </tr>
+            </table>
+
+            <code>
+                <h2>payload</h2>
+                Authorization: token
+
+                <h2>Response</h2>
+       
+                QRCode image
+            </code>
+        </form>
+    </div>
+
+</body>
+</html>
